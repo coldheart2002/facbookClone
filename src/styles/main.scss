@@ -1,0 +1,411 @@
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css");
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+$defaultIconSize: 1.7rem;
+$navHeight: 70px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+i {
+  @include flex(row, center, center);
+  // cursor: pointer;
+  color: black;
+  background: transparent;
+}
+a {
+  text-decoration: none;
+}
+
+.mainContainer {
+  @include flex(column, center, center);
+  height: 100vh;
+  width: 100vw;
+  border: solid 1px;
+  .header {
+    @include flex(row, center, center);
+    border-bottom: 1px solid;
+    background-color: lightgray;
+    padding: 0 20px;
+    width: 100%;
+    height: $navHeight;
+    .leftHeader {
+      @include flex(row, center, center);
+      margin: 10px 20px;
+      width: 300px;
+      .leftHeaderIcon {
+        font-size: 1.7 * $defaultIconSize;
+        padding: 0 10px;
+      }
+      .searchContainer {
+        flex: 1;
+        .searchInput {
+          width: 100%;
+          outline: none;
+          padding: 5px 10px;
+          height: 40px;
+          border-radius: 50px;
+          border: none;
+          background-color: #efefef;
+
+          &::placeholder {
+            margin: 30px;
+            color: black;
+          }
+        }
+      }
+    }
+    .middleHeader {
+      @include flex(row, center, center);
+      flex: 1;
+      .middleHeaderIconContainer {
+        width: 500px;
+        ul {
+          @include flex(row, center, center);
+          li {
+            margin: 0 5px;
+            border-radius: 10px;
+            border: solid 1px;
+            flex: 1;
+            padding: 10px 0;
+            list-style: none;
+
+            .middleHeaderIcon {
+              font-size: $defaultIconSize;
+            }
+          }
+        }
+      }
+    }
+    .rightHeader {
+      margin: 0 20px;
+      width: 300px;
+      ul {
+        @include flex(row, center, space-around);
+
+        li {
+          border: solid 1px;
+          padding: 10px;
+          border-radius: 50%;
+          list-style: none;
+
+          .rightHeaderIcon {
+            font-size: $defaultIconSize;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    height: 80vh;
+    width: 100%;
+
+    .contents {
+      @include flex(row, center, center);
+      height: 100%;
+
+      .leftSidebar {
+        position: relative;
+        background-color: lightgray;
+        flex: 1;
+        height: 100%;
+      }
+
+      .mainContentContainer {
+        @include flex(row, center, center);
+        overflow: auto;
+        position: relative;
+        flex: 1;
+        min-width: 900px;
+        height: 100%;
+
+        .mainContent {
+          padding-top: 20px;
+          position: absolute;
+          font-size: 50px;
+          text-align: center;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 100%;
+          z-index: 10;
+          width: 800px;
+          background-color: none;
+
+          .mainContentHeader {
+            @include flex(row, center, start);
+            position: relative;
+            padding-bottom: 20px;
+
+            .createStory {
+              border: solid 1px;
+              height: 250px;
+              border-radius: 10px;
+              overflow: hidden;
+              position: relative;
+              margin-right: 20px;
+
+              .profile {
+                aspect-ratio: 1/1.2;
+                width: 150px;
+                background-color: red;
+              }
+              .addIcon {
+                border-radius: 50%;
+                font-size: 40px;
+                border: solid 7px white;
+                position: absolute;
+                bottom: 40px;
+                left: 50%;
+                background-color: white;
+                transform: translateX(-50%);
+              }
+              .storyText {
+                font-weight: 600;
+                text-align: center;
+                margin-top: 40px;
+              }
+            }
+
+            .storyContainer {
+              @include flex(row, start, start);
+              font-size: 100px;
+              width: 630px;
+              height: 250px;
+              overflow-x: auto;
+              .othersStoryContainer {
+                position: relative;
+                border: solid 1px;
+                border-radius: 10px;
+                overflow: hidden;
+                height: 100%;
+                margin-right: 20px;
+                flex: 0 0 150px;
+                .stroryProfile {
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  border-radius: 50%;
+                  aspect-ratio: 1/1;
+                  height: 50px;
+                  border: solid 3px blue;
+                }
+
+                .storyProfileName {
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                  font-size: 12px;
+                  color: white;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                }
+              }
+            }
+          }
+
+          .whatsOnYourMind {
+            overflow: hidden;
+            border: solid 1px;
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            .upperContents {
+              @include flex(row, center, center);
+              padding-right: 30px;
+              width: 100%;
+              .profileIcon {
+                height: 50px;
+                border: solid 1px;
+                border-radius: 50%;
+                aspect-ratio: 1/1;
+                margin: 0 20px 10px 20px;
+              }
+              .whatsOnYourMindInput {
+                flex: 1;
+                padding: 10px;
+                border-radius: 20px;
+                border: solid 1px;
+                outline: none;
+              }
+            }
+            .lowerContents {
+              ul {
+                @include flex(row, center, space-between);
+                padding: 0 20px;
+                li {
+                  list-style: none;
+                  cursor: pointer;
+                  padding: 7px;
+                  border-radius: 10px;
+                  width: 250px;
+                  &:hover {
+                    background-color: #efefef;
+                  }
+                  .lowerContentsIconContainer {
+                    @include flex(row, center, center);
+                    .lowerContentsIcon {
+                      font-size: 30px;
+                      margin-right: 10px;
+                    }
+                    .video {
+                      color: red;
+                    }
+                    .picture {
+                      color: green;
+                    }
+                    .activity {
+                      color: orange;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .createPosts {
+            padding: 20px;
+            position: relative;
+            box-shadow: 1px 2px 5px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            .posersInfo {
+              @include flex(row, center, start);
+              position: relative;
+              margin-bottom: 20px;
+              .posersProfile {
+                aspect-ratio: 1/1;
+                height: 50px;
+                border-radius: 50%;
+                border: solid 1px;
+                margin-right: 10px;
+                position: relative;
+                .activityStatus {
+                  position: absolute;
+                  aspect-ratio: 1/1;
+                  height: 17px;
+                  border-radius: 50%;
+                  background-color: green;
+                  bottom: -2px;
+                  right: -1px;
+                  border: solid white 3px;
+                }
+              }
+              .poserProfileDetails {
+                @include flex(column, start, start);
+                .poserName {
+                  font-weight: 700;
+                  font-size: 1rem;
+                  margin-bottom: 2px;
+                }
+                .postAdditionalDetails {
+                  @include flex(row, center, start);
+                  .postTime {
+                    font-size: 0.8rem;
+                    margin-right: 10px;
+                  }
+                  .postdetails {
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+              .rightIconsContainer {
+                @include flex(row, center, center);
+                position: absolute;
+                right: 0;
+                .rightIcons {
+                  font-size: 2rem;
+                  font-weight: 100;
+                  margin-left: 20px;
+                }
+              }
+            }
+            .postsContent {
+              padding: 20px;
+              border: solid 1px red;
+              border-radius: 10px;
+              text-align: center;
+            }
+            .postSatus {
+              @include flex(row, center, space-between);
+              margin: 10px 0;
+              .leftPostStatus {
+                @include flex(row, center, center);
+                .fi {
+                  @include flex(row, center, center);
+                  padding: 5px;
+                  border: solid 1px;
+                  border-radius: 50%;
+                  color: white;
+                  font-size: 0.8rem;
+                }
+                .hearIcon {
+                  background-color: red;
+                }
+                .likeIcon {
+                  background-color: blue;
+                  margin-left: -5px;
+                  z-index: -1;
+                }
+                .postStatus {
+                  font-size: 1rem;
+                  margin-left: 10px;
+                }
+              }
+              .rightPostStatus {
+                @include flex(row, center, center);
+                .commentsStatus {
+                  margin-right: 20px;
+                  font-size: 1rem;
+                }
+              }
+            }
+            .postFooter {
+              ul {
+                @include flex(row, center, space-between);
+                li {
+                  cursor: pointer;
+                  list-style: none;
+                  width: 250px;
+                  padding: 10px;
+                  border-radius: 10px;
+                  &:hover {
+                    background-color: #efefef;
+                  }
+                  .footerIconContainer {
+                    @include flex(row, center, center);
+                    .footerIcon {
+                      font-size: 1rem;
+                      margin-right: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .rightSidebar {
+        position: relative;
+        background-color: lightgray;
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+      }
+    }
+  }
+}

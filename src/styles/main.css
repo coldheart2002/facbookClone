@@ -1,0 +1,456 @@
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  border: solid 1px;
+}
+.mainContainer .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid;
+  background-color: lightgray;
+  padding: 0 20px;
+  width: 100%;
+  height: 70px;
+}
+.mainContainer .header .leftHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px;
+  width: 300px;
+}
+.mainContainer .header .leftHeader .leftHeaderIcon {
+  font-size: 2.89rem;
+  padding: 0 10px;
+}
+.mainContainer .header .leftHeader .searchContainer {
+  flex: 1;
+}
+.mainContainer .header .leftHeader .searchContainer .searchInput {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  background-color: #efefef;
+}
+.mainContainer .header .leftHeader .searchContainer .searchInput::-moz-placeholder {
+  margin: 30px;
+  color: black;
+}
+.mainContainer .header .leftHeader .searchContainer .searchInput::placeholder {
+  margin: 30px;
+  color: black;
+}
+.mainContainer .header .middleHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.mainContainer .header .middleHeader .middleHeaderIconContainer {
+  width: 500px;
+}
+.mainContainer .header .middleHeader .middleHeaderIconContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .header .middleHeader .middleHeaderIconContainer ul li {
+  margin: 0 5px;
+  border-radius: 10px;
+  border: solid 1px;
+  flex: 1;
+  padding: 10px 0;
+  list-style: none;
+}
+.mainContainer .header .middleHeader .middleHeaderIconContainer ul li .middleHeaderIcon {
+  font-size: 1.7rem;
+}
+.mainContainer .header .rightHeader {
+  margin: 0 20px;
+  width: 300px;
+}
+.mainContainer .header .rightHeader ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.mainContainer .header .rightHeader ul li {
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 50%;
+  list-style: none;
+}
+.mainContainer .header .rightHeader ul li .rightHeaderIcon {
+  font-size: 1.7rem;
+}
+.mainContainer .content {
+  flex: 1;
+  height: 80vh;
+  width: 100%;
+}
+.mainContainer .content .contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.mainContainer .content .contents .leftSidebar {
+  position: relative;
+  background-color: lightgray;
+  flex: 1;
+  height: 100%;
+}
+.mainContainer .content .contents .mainContentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  position: relative;
+  flex: 1;
+  min-width: 900px;
+  height: 100%;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent {
+  padding-top: 20px;
+  position: absolute;
+  font-size: 50px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  z-index: 10;
+  width: 800px;
+  background-color: none;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  padding-bottom: 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .createStory {
+  border: solid 1px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .createStory .profile {
+  aspect-ratio: 1/1.2;
+  width: 150px;
+  background-color: red;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .createStory .addIcon {
+  border-radius: 50%;
+  font-size: 40px;
+  border: solid 7px white;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .createStory .storyText {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .storyContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  font-size: 100px;
+  width: 630px;
+  height: 250px;
+  overflow-x: auto;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .storyContainer .othersStoryContainer {
+  position: relative;
+  border: solid 1px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  margin-right: 20px;
+  flex: 0 0 150px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .storyContainer .othersStoryContainer .stroryProfile {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 50px;
+  border: solid 3px blue;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .mainContentHeader .storyContainer .othersStoryContainer .storyProfileName {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind {
+  overflow: hidden;
+  border: solid 1px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .upperContents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+  width: 100%;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .upperContents .profileIcon {
+  height: 50px;
+  border: solid 1px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin: 0 20px 10px 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .upperContents .whatsOnYourMindInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 1px;
+  outline: none;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 10px;
+  width: 250px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li:hover {
+  background-color: #efefef;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li .lowerContentsIconContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li .lowerContentsIconContainer .lowerContentsIcon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li .lowerContentsIconContainer .video {
+  color: red;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li .lowerContentsIconContainer .picture {
+  color: green;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .whatsOnYourMind .lowerContents ul li .lowerContentsIconContainer .activity {
+  color: orange;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts {
+  padding: 20px;
+  position: relative;
+  box-shadow: 1px 2px 5px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  margin-bottom: 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .posersProfile {
+  aspect-ratio: 1/1;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 1px;
+  margin-right: 10px;
+  position: relative;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .posersProfile .activityStatus {
+  position: absolute;
+  aspect-ratio: 1/1;
+  height: 17px;
+  border-radius: 50%;
+  background-color: green;
+  bottom: -2px;
+  right: -1px;
+  border: solid white 3px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .poserProfileDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .poserProfileDetails .poserName {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .poserProfileDetails .postAdditionalDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .poserProfileDetails .postAdditionalDetails .postTime {
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .poserProfileDetails .postAdditionalDetails .postdetails {
+  font-size: 0.8rem;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .rightIconsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .posersInfo .rightIconsContainer .rightIcons {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-left: 20px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postsContent {
+  padding: 20px;
+  border: solid 1px red;
+  border-radius: 10px;
+  text-align: center;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .leftPostStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .leftPostStatus .fi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: solid 1px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.8rem;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .leftPostStatus .hearIcon {
+  background-color: red;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .leftPostStatus .likeIcon {
+  background-color: blue;
+  margin-left: -5px;
+  z-index: -1;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .leftPostStatus .postStatus {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .rightPostStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postSatus .rightPostStatus .commentsStatus {
+  margin-right: 20px;
+  font-size: 1rem;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postFooter ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postFooter ul li {
+  cursor: pointer;
+  list-style: none;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postFooter ul li:hover {
+  background-color: #efefef;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postFooter ul li .footerIconContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .content .contents .mainContentContainer .mainContent .createPosts .postFooter ul li .footerIconContainer .footerIcon {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.mainContainer .content .contents .rightSidebar {
+  position: relative;
+  background-color: lightgray;
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}/*# sourceMappingURL=main.css.map */
